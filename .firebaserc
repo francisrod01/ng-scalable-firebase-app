@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-firebase-app-cc55f": {
+      "hosting": {
+        "ng-scalable-firebase-app": [
+          "my-firebase-app-cc55f"
+        ]
+      }
+    }
+  }
+}
