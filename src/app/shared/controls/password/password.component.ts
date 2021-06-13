@@ -49,10 +49,14 @@ export class PasswordComponent implements OnInit, ControlValueAccessor {
     this.isDisabled = isDisabled;
   }
 
-  onKeyup(value: string): void {
-    this.value = value;
-    this.propagateChange(value);
-    this.changed.emit(value);
+  onKeyup(target: EventTarget | null): void {
+    if (target instanceof HTMLInputElement) {
+      const value = target.value;
+
+      this.value = value;
+      this.propagateChange(value);
+      this.changed.emit(value);
+    }
   }
 
   onBlur(): void {
