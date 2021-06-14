@@ -48,7 +48,12 @@ export class SharedComponent implements OnInit {
         updateOn: 'change', validators: [
           Validators.required
         ]
-      }]
+      }],
+      checkboxes: [null, {
+        updateOn: 'change', validators: [
+          Validators.required
+        ]
+      }],
     });
   }
 
